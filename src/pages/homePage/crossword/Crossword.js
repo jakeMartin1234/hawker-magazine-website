@@ -12,11 +12,11 @@ const Crossword = () => {
     }
     return (
         <div className="crossword-container">
-            {squareList.map((row) =>
-                <div className="crossword-row">
+            {squareList.map((row, index) =>
+                <div className="crossword-row" key={index}>
                     {
                         row.map((square) =>
-                            <div className="square"/>
+                            <div className="square" key={square}/>
                         )
                     }
                 </div>
